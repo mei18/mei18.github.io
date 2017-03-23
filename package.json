@@ -1,0 +1,23 @@
+{
+  "name": "miniGame-ShengHuo",
+  "version": "1.0.0",
+  "description": "SVG/GSAP",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files *.js, *.html, css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mei18/miniGame-ShengHuo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mei18/miniGame-ShengHuo/issues"
+  },
+  "homepage": "https://github.com/mei18/miniGame-ShengHuo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  }
+}
