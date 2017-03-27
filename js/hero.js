@@ -1,38 +1,51 @@
-var character = $("#character");
-var height = 467;
-var isJumping = false;
-var velY = 0;
-var speed = 3;
-var y = height - 5;
-var keys = [];
-var gravity = 0.3;
-var jump = new TweenMax(character, 2, {y:0});
 
-function Hero() {
-  if (keys[32]) {
+
+function Hero(position) {
+  if (!(this instanceof Hero)) {
+        return new Hero(position);
+    }
+   this.character = $("#character");
+   this.height = 467;
+   this.isJumping = false;
+   this.velY = 0;
+   this.speed = 3;
+   this.y = this.height - 5;
+   this.keys = [];
+   this.gravity = 0.3;
+   this.position = position;
+   this.jump = new TweenMax(this.character, 2, {y:0});
+}
+Hero.prototype.update = function () {
+    //add velocity
+    this.position.add(this.speed);
+    this.render();
+}
+
+Hero.prototype.render = function () {
+  if (this.keys[32]) {
       // up space
       console.log("hello");
-    if(!isJumping){
-     jump = new TweenMax(character, 2, {y:0});
-     isJumping = true;
-     velY =- speed*2;
+    if(!this.isJumping){
+     this.jump = new TweenMax(character, 2, {y:0});
+     this.isJumping = true;
+     this.velY =- this.speed*2;
     }
   }
 
-  velY += gravity;
+  this.velY += this.gravity;
 
-  y += velY;
+  this.y += this.velY;
 
-  if(y >=1600 - height){
-      y = 1600 - height;
-      isJumping = false;
+  if(this.y >=1600 - this.height){
+      this.y = 1600 - this.height;
+      this.isJumping = false;
   }
+
+  document.body.addEventListener("keydown", function(e) {
+      this.keys[e.keyCode] = true;
+  });
+
+  document.body.addEventListener("keyup", function(e) {
+      this.keys[e.keyCode] = false;
+  });
 }
-
-document.body.addEventListener("keydown", function(e) {
-    keys[e.keyCode] = true;
-});
-
-document.body.addEventListener("keyup", function(e) {
-    keys[e.keyCode] = false;
-});
