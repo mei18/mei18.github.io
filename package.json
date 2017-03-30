@@ -4,7 +4,7 @@
   "description": "SVG/GSAP",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server --files *.js, *.html, css/style.css"
+    "start": "browser-sync start --server --files *.js, index.html, view/game.html, css/style.css"
   },
   "repository": {
     "type": "git",
