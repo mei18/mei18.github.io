@@ -7,7 +7,9 @@ function Hero(position) {
     this.image = document.getElementById("character");
     this.isJumping = false;
     this.canJump = false;
+    //hacer la animacion para arriba
     this.jumpTween = null;
+    //organiza la animacion
     this.timeLine = null;
 
 }
@@ -21,7 +23,7 @@ Hero.prototype.update = function () {
 }
 
 Hero.prototype.jump = function () {
-    //Se crean los objecto para hacer la animacion solo una ves, por eso de inician en null cuando se 
+    //Se crean los objecto para hacer la animacion solo una ves, por eso de inician en null cuando se
     //construye el objecto
     if (this.jumpTween == null && this.timeLine == null) {
 
