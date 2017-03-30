@@ -4,9 +4,11 @@ function init() {
   console.log("init");
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
+  let width = window.innerWidth;
+  let height = window.innerHeight;
 
   let pool = [];
-  let hero = Hero(Vector(635, 476));
+  let hero = Hero(Vector(width / 2, height / 2));
 
   //1. Recuerda agregar todos los elementos del juego que necesitan animacion
   //al pool de objecto.

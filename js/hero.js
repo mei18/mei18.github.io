@@ -4,22 +4,43 @@ function Hero(position) {
         return new Hero(position);
     }
 
+    this.position = position;
+    this.origin = Vector(position.x, position.y);
     this.image = document.getElementById("character");
-    this.isJumping = false;
     this.canJump = false;
+
     //hacer la animacion para arriba
     this.jumpTween = null;
     //organiza la animacion
     this.timeLine = null;
 
+    this.jumpingHeight = 100;
+    this.isGoindUp = false;
+
 }
 
 Hero.prototype.update = function () {
+
     if (this.canJump) {
-        if (!this.isJumping) {
-            this.jump();
+        if (this.position.y > (this.origin.y - this.jumpingHeight)) {
+            this.position.y -= 10;
+        }
+
+    }
+
+    if (!this.canJump) {
+        if (this.position.y < this.origin.y) {
+            this.position.y += 10;
+        } else {
+            this.position.y = this.origin.y
         }
     }
+
+    this.render();
+}
+
+Hero.prototype.render = function () {
+    this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')')
 }
 
 Hero.prototype.jump = function () {
@@ -57,8 +78,4 @@ Hero.prototype.jump = function () {
     }
 
     this.isJumping = true;
-}
-
-Hero.prototype.render = function () {
-
 }

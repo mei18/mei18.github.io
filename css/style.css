@@ -3,3 +3,11 @@ body {
   height: 0px;
   max-width: 100%;
 }
+
+.hero {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  width: 100px;
+  height: auto;
+}
