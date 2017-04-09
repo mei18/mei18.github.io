@@ -1,7 +1,14 @@
 body {
-  margin: 0 auto;
-  height: 0px;
+  margin: 0px;
+  padding: 0px;
   max-width: 100%;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: red;
 }
 
 .hero {

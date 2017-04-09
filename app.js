@@ -1,18 +1,28 @@
 window.addEventListener("load", init, false);
 
 function init() {
+  let width = window.innerWidth,
+      height = window.innerHeight,
+      canvas = document.createElement('canvas'),
+      context = canvas.getContext('2d'),
+      pool = [];
+
+    document.body.appendChild(canvas);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
   console.log("init");
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
-  let width = window.innerWidth;
-  let height = window.innerHeight;
 
-  let pool = [];
-  let hero = Hero(Vector(width / 2, height / 2));
+  let hero = Hero(Vector(canvas.width / 2, canvas.height / 2));
 
   //1. Recuerda agregar todos los elementos del juego que necesitan animacion
   //al pool de objecto.
   pool.push(hero);
+
+  let enemy = Enemy(Vector(canvas.width / 2, canvas.height / 2));
+  pool.push(enemy);
 
   function update() {
     //2. Recuerda que para animar los objectos hay que llamar a sus

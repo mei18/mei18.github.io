@@ -48,7 +48,7 @@ Hero.prototype.jump = function () {
     //construye el objecto
     if (this.jumpTween == null && this.timeLine == null) {
 
-        this.jumpTween = new TweenLite.to(this.image, 0.25, { y: -150, ease: Linear.easeNone });
+        this.jumpTween = new TweenLite.to(this.image, 0.25, { y: -100, ease: Linear.easeNone });
         //Se crea el time line  y se pasa el call back y el parametro porque se necesita tener la instancia
         //de este objecto sino se pierde.
         this.timeLine = new TimelineLite({ onComplete: completeHandler, onCompleteParams: [this], onReverseComplete: onReverseComplete, onReverseCompleteParams: [this] });

@@ -279,3 +279,7 @@ Vector.prototype.rotateTo = function (a) {
     this.x = (m * Math.cos(a));
     return this;
 }
+
+function randomBtween(max, min) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
