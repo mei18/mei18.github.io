@@ -20,9 +20,12 @@ function init() {
   //1. Recuerda agregar todos los elementos del juego que necesitan animacion
   //al pool de objecto.
   pool.push(hero);
+  console.log("hero" , hero);
 
   let enemy = Enemy(Vector(canvas.width / 2, canvas.height / 2));
   pool.push(enemy);
+  console.log(enemy);
+  
 
   function update() {
     //2. Recuerda que para animar los objectos hay que llamar a sus
