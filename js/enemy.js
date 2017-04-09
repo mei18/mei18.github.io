@@ -5,9 +5,29 @@ function Enemy(position) {
 
     this.velocity = Vector(-0.9, 0);
     this.position = position;
-    this.img = new Image();
-    this.enemys = ['../img/EBlue.png', '../img/ERed.png','../img/EBrown.png','../img/EYellow.png', '../img/icicle.png','../img/lava.png','../img/stoneShard.png', '../img/WBlue.png','../img/WBrown.png','../img/WRed.png','../img/WYellow.png'];
-
+    this.enemys = [];
+    this.enemys = new Image();
+    this.enemys[0].src = '../img/EBlue.png';
+    this.enemys = new Image();
+    this.enemys[1].src = '../img/ERed.png';
+    this.enemys = new Image();
+    this.enemys[2].src = '../img/EBrown.png';
+    this.enemys = new Image();
+    this.enemys[3].src = '../img/EYellow.png';
+    this.enemys = new Image();
+    this.enemys[4].src = '../img/icicle.png';
+    this.enemys = new Image();
+    this.enemys[5].src = '../img/lava.png';
+    this.enemys = new Image();
+    this.enemys[6].src = '../img/stoneShard.png';
+    this.enemys = new Image();
+    this.enemys[7].src = '../img/WBlue.png';
+    this.enemys = new Image();
+    this.enemys[8].src = '../img/WBrown.png';
+    this.enemys = new Image();
+    this.enemys[9].src = '../img/WRed.png';
+    this.enemys = new Image();
+    this.enemys[10].src = '../img/WYellow.png';
 }
 
 Enemy.prototype.update = function () {
