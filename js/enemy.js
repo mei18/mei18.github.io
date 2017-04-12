@@ -15,8 +15,9 @@ function Enemy(position, image) {
     this.enemys[1] = new Image();
     this.enemys[1].src = '../img/ERed.png';
 
-    this.image = image;
 
+    this.image = image;
+    this.image.style.top = this.position.y;
 
 
     //console.log("array de enemigos" , this.enemys);
@@ -52,7 +53,8 @@ Enemy.prototype.update = function () {
 
 Enemy.prototype.render = function () {
     console.log('render');
-    this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
+    this.image.style.left = this.position.x;
+    // this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
     /*
   //esto es solo para debug para ver si esta moviendo.
   this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
