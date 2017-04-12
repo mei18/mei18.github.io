@@ -1,6 +1,6 @@
-function Enemy(position) {
+function Enemy(position, image) {
     if (!(this instanceof Enemy)) {
-        return new Enemy(position);
+        return new Enemy(position, image);
     }
 
     console.log('Enemy');
@@ -15,17 +15,7 @@ function Enemy(position) {
     this.enemys[1] = new Image();
     this.enemys[1].src = '../img/ERed.png';
 
-
-
-    let image = new Image();
-    image.onload = function () {
-        console.log('Load image');
-        document.body.appendChild(image);
-
-    };
-    image.src = "../img/EBlue.png";
-    image.id = 'enemy1';
-    image.className = 'enemy';
+    this.image = image;
 
 
 
@@ -61,6 +51,8 @@ Enemy.prototype.update = function () {
 }
 
 Enemy.prototype.render = function () {
+    console.log('render');
+    this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
     /*
   //esto es solo para debug para ver si esta moviendo.
   this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');

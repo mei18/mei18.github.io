@@ -19,27 +19,19 @@ function init() {
 
 
   // let image = document.createElement('img');
+  let image = new Image();
+  image.onload = function () {
+    console.log('Load image');
+    document.body.appendChild(image);
 
+  };
+  image.src = "../img/EBlue.png";
+  image.id = 'enemy1';
+  image.style.position = 'absolute';
+  image.style.width = 100;
+  // image.className = 'enemy'
 
-
-
-  // var img = new Image();
-  // var div = document.getElementById('enemies');
-  // img.onload = function () {
-  //   console.log('add image');
-  //   img.src = "../img/EBlue.png";
-  //   document.body.appendChild(img);
-
-  // };
-
-
-
-
-
-
-
-
-  let enemy = Enemy(Vector(width / 2, height / 2));
+  let enemy = Enemy(Vector(width / 2, height / 2), image);
   pool.push(enemy);
   // console.log(enemy);
 
