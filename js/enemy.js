@@ -1,17 +1,23 @@
-function Enemy(position) {
+function Enemy(position, image) {
     if (!(this instanceof Enemy)) {
-        return new Enemy(position);
+        return new Enemy(position, image);
     }
+
+    console.log('Enemy');
 
     this.velocity = Vector(-0.9, 0);
     this.position = position;
     //img
-    this.image = document.getElementById("enemy");
+    // this.image = document.getElementById("enemy");
     this.enemys = new Array;
     this.enemys[0] = new Image();
     this.enemys[0].src = "../img/EBlue.png";
-    this.enemys[1]= new Image();
+    this.enemys[1] = new Image();
     this.enemys[1].src = '../img/ERed.png';
+
+    this.image = image;
+
+
 
     //console.log("array de enemigos" , this.enemys);
     //console.log('img del enemy en el html',this.image);
@@ -45,6 +51,9 @@ Enemy.prototype.update = function () {
 }
 
 Enemy.prototype.render = function () {
+    console.log('render');
+    this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
+    /*
   //esto es solo para debug para ver si esta moviendo.
   this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
   for(var i = 0; i < this.enemys.length; i++) {
@@ -70,6 +79,7 @@ Enemy.prototype.render = function () {
             //break;
         }
     }
+    */
 }
 
 Enemy.prototype.checkBounderies = function () {
