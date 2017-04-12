@@ -2,8 +2,8 @@ window.addEventListener("load", init, false);
 
 function init() {
   let width = window.innerWidth,
-      height = window.innerHeight,
-      pool = [];
+    height = window.innerHeight,
+    pool = [];
 
 
   console.log("init");
@@ -15,11 +15,33 @@ function init() {
   //1. Recuerda agregar todos los elementos del juego que necesitan animacion
   //al pool de objecto.
   pool.push(hero);
-  console.log("hero" , hero);
+  // console.log("hero", hero);
+
+
+  // let image = document.createElement('img');
+
+
+
+
+  // var img = new Image();
+  // var div = document.getElementById('enemies');
+  // img.onload = function () {
+  //   console.log('add image');
+  //   img.src = "../img/EBlue.png";
+  //   document.body.appendChild(img);
+
+  // };
+
+
+
+
+
+
+
 
   let enemy = Enemy(Vector(width / 2, height / 2));
   pool.push(enemy);
-  console.log(enemy);
+  // console.log(enemy);
 
 
   function update() {
