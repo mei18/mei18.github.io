@@ -5,6 +5,9 @@ function Hero(position) {
     }
 
     this.position = position;
+    this.width = 100;
+    this.height = 100;
+
     this.origin = Vector(position.x, position.y);
     this.image = document.getElementById("character");
     this.canJump = false;
@@ -78,4 +81,12 @@ Hero.prototype.jump = function () {
     }
 
     this.isJumping = true;
+}
+
+Hero.prototype.onCollisionEnter = function () {
+    // console.log('onCollisionEnter()');
+}
+
+Hero.prototype.getRect = function () {
+    return Rect(this.position.x, this.position.y, this.width, this.height);
 }

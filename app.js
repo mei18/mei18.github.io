@@ -3,7 +3,7 @@ window.addEventListener("load", init, false);
 function init() {
   let width = window.innerWidth,
     height = window.innerHeight,
-    pool = [];
+    enemiesPool = [];
 
 
   console.log("init");
@@ -14,7 +14,7 @@ function init() {
 
   //1. Recuerda agregar todos los elementos del juego que necesitan animacion
   //al pool de objecto.
-  pool.push(hero);
+  // pool.push(hero);
   // console.log("hero", hero);
 
 
@@ -32,17 +32,24 @@ function init() {
   // image.className = 'enemy'
 
   let enemy = Enemy(Vector(width / 2, height / 2), image);
-  pool.push(enemy);
+  enemiesPool.push(enemy);
   // console.log(enemy);
 
 
   function update() {
     //2. Recuerda que para animar los objectos hay que llamar a sus
     // update() como se hace en el for loop
-    pool.forEach(function (gameObject) {
-      gameObject.update();
+    hero.update();
+
+    enemiesPool.forEach(function (enemy) {
+      enemy.update();
+
+      if (hitRectOnRect(hero.getRect(), enemy.getRect())) {
+        enemy.onCollisionEnter();
+      }
     }, this);
     //revisar
+
     requestAnimationFrame(update);
   }
 

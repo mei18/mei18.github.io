@@ -7,6 +7,8 @@ function Enemy(position, image) {
 
     this.velocity = Vector(-0.9, 0);
     this.position = position;
+    this.width = 100;
+    this.height = 100;
     //img
     // this.image = document.getElementById("enemy");
     this.enemys = new Array;
@@ -52,7 +54,7 @@ Enemy.prototype.update = function () {
 }
 
 Enemy.prototype.render = function () {
-    console.log('render');
+
     this.image.style.left = this.position.x;
     // this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
     /*
@@ -82,6 +84,14 @@ Enemy.prototype.render = function () {
         }
     }
     */
+}
+
+Enemy.prototype.onCollisionEnter = function () {
+    console.log('onCollisionEnter()');
+}
+
+Enemy.prototype.getRect = function () {
+    return Rect(this.position.x, this.position.y, this.width, this.height);
 }
 
 Enemy.prototype.checkBounderies = function () {
