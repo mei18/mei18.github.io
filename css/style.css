@@ -1,16 +1,14 @@
 body {
   margin: 0px;
   padding: 0px;
-  max-width: 100%;
+  width: 100%;
 }
 
-canvas {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    background-color: red;
+svg {
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
-
 .hero {
   position: absolute;
   top: 300px;

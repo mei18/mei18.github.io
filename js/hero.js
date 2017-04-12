@@ -14,7 +14,7 @@ function Hero(position) {
     //organiza la animacion
     this.timeLine = null;
 
-    this.jumpingHeight = 100;
+    this.jumpingHeight = 150;
     this.isGoindUp = false;
 
 }
