@@ -190,11 +190,11 @@ viewBox="0 0 1670 982" enable-background="new 0 0 1670 982" xml:space="preserve"
 		c1.151-7.439,1.722-14.893,1.974-22.354H-4.157v33.034H1669.61C1668.77,681.468,1668.495,677.818,1669.026,674.386z" />
 	</g>
 	<g id="character">
-		<image xlink:href=" ../img/mainCh.png " x="-350 " y="0" height="155px " width="190px " />
+		<image xlink:href=" ../img/mainCh.png " x="-290" y="0" height="155px " width="150px " />
 	</g>
 
 	<g id="enemy">
-		<image id="img-enemy" xlink:href="" x="0 " y="0" height="155px " width="190px " />
+		<image id="img-enemy" xlink:href="" x="0 " y="0" height="85px " width="100px " />
 	</g>
 
 	<a xlink:href="../index.html">
@@ -205,9 +205,30 @@ viewBox="0 0 1670 982" enable-background="new 0 0 1670 982" xml:space="preserve"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../js/shapes.js"></script>
 <script src="../js/vector.js"></script>
 <script src="../js/tools.js"></script>
 <script src="../app.js"></script>
 <script src="../js/hero.js"></script>
 <script src="../js/enemy.js"></script>
+
+<div class="modal fade bs-example-modal-lg" data-backdrop="static" data-keyboard="false" style="top: 25%;" tabindex="-1" role="dialog" id="gOver">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center"  style="font-size: 50px;">GAME OVER!</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-center" style="font-size: 20px;">Maybe the next time you can survive!</p>
+      </div>
+      <div class="modal-footer">
+				<a href="game.html" class="btn btn-primary btn-block" style="color: #fff; font-size: 16px;">Try Again</a>
+				<a href="../index.html" class="btn btn-success btn-block" style="color:  #fff; font-size: 16px">Main Page</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

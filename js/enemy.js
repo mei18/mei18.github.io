@@ -5,43 +5,33 @@ function Enemy(position, image) {
 
     console.log('Enemy');
 
-    this.velocity = Vector(-0.9, 0);
+    this.velocity = Vector(-5, 0);
     this.position = position;
     this.width = 100;
-    this.height = 100;
-    //img
-    // this.image = document.getElementById("enemy");
-    this.enemys = new Array;
-    this.enemys[0] = new Image();
-    this.enemys[0].src = "../img/EBlue.png";
-    this.enemys[1] = new Image();
-    this.enemys[1].src = '../img/ERed.png';
+    this.height = 85;
 
-
-    this.image = image;
-    this.image.style.top = this.position.y;
-
-
-    //console.log("array de enemigos" , this.enemys);
-    //console.log('img del enemy en el html',this.image);
-    // this.enemys = new Image();
-    // this.enemys[2].src = '../img/EBrown.png';
-    // this.enemys = new Image();
-    // this.enemys[3].src = '../img/EYellow.png';
-    // this.enemys = new Image();
-    // this.enemys[4].src = '../img/icicle.png';
-    // this.enemys = new Image();
-    // this.enemys[5].src = '../img/lava.png';
-    // this.enemys = new Image();
-    // this.enemys[6].src = '../img/stoneShard.png';
-    // this.enemys = new Image();
-    // this.enemys[7].src = '../img/WBlue.png';
-    // this.enemys = new Image();
-    // this.enemys[8].src = '../img/WBrown.png';
-    // this.enemys = new Image();
-    // this.enemys[9].src = '../img/WRed.png';
-    // this.enemys = new Image();
-    // this.enemys[10].src = '../img/WYellow.png';
+    this.image1 = image;
+    this.image1.style.top = this.position.y + 320;
+    this.image2 = image;
+    this.image2.style.top = this.position.y + 320;
+    this.image3 = image;
+    this.image3.style.top = this.position.y + 320;
+    this.image4 = image;
+    this.image4.style.top = this.position.y + 320;
+    this.image5 = image;
+    this.image5.style.top = this.position.y + 320;
+    this.image6 = image;
+    this.image6.style.top = this.position.y + 320;
+    this.image7 = image;
+    this.image7.style.top = this.position.y + 320;
+    this.image8 = image;
+    this.image8.style.top = this.position.y + 320;
+    this.image9 = image;
+    this.image9.style.top = this.position.y + 320;
+    this.image10 = image;
+    this.image10.style.top = this.position.y + 320;
+    this.image11 = image;
+    this.image11.style.top = this.position.y + 320;
 
 }
 
@@ -55,11 +45,20 @@ Enemy.prototype.update = function () {
 
 Enemy.prototype.render = function () {
 
-    this.image.style.left = this.position.x;
-    // this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
+    this.image1.style.left = this.position.x;
+    this.image2.style.left = this.position.x;
+    this.image3.style.left = this.position.x;
+    this.image4.style.left = this.position.x;
+    this.image5.style.left = this.position.x;
+    this.image6.style.left = this.position.x;
+    this.image7.style.left = this.position.x;
+    this.image8.style.left = this.position.x;
+    this.image9.style.left = this.position.x;
+    this.image10.style.left = this.position.x;
+    this.image11.style.left = this.position.x;
+
     /*
-  //esto es solo para debug para ver si esta moviendo.
-  this.image.setAttribute('transform', 'translate(' + this.position.x + ',' + this.position.y + ')');
+
   for(var i = 0; i < this.enemys.length; i++) {
     //sacar la img en random.
     var randomimg = this.enemys[Math.floor(Math.random() * this.enemys.length)];
@@ -92,11 +91,12 @@ Enemy.prototype.onCollisionEnter = function () {
 
 Enemy.prototype.getRect = function () {
     return Rect(this.position.x, this.position.y, this.width, this.height);
+
 }
 
 Enemy.prototype.checkBounderies = function () {
     //toma el ancho de la imagen y lo devuelve
-    if (this.position.x < -200) {
-        this.position.x = window.innerWidth;
+    if (this.position.x < -100) {
+        this.position.x  = window.innerWidth;
     }
 }
