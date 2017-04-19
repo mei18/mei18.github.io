@@ -14,6 +14,8 @@ function init() {
 
   let hero = Hero(Vector(width / 2, height / 2.5));
   console.log("heroe", hero);
+  $('#character').css('background', '#2C81B7');
+
 
   let image1 = new Image();
   image1.src = "../img/EBlue.png";
