@@ -1,7 +1,7 @@
 window.addEventListener("load", init, false);
 
 function init() {
-  let width = window.innerWidth,
+  var width = window.innerWidth,
     height = window.innerHeight,
     enemiesPool = [],
     animation;
@@ -12,7 +12,7 @@ function init() {
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
 
-  let hero = Hero(Vector(width / 2, height / 5));
+  let hero = Hero(Vector(width / 2, height / 2));
   console.log("heroe", hero);
   $('#character').css('background', '#2C81B7');
 
