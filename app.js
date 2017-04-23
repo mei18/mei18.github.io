@@ -12,7 +12,7 @@ function init() {
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
 
-  let hero = Hero(Vector(width / 2, height / 1.9));
+  let hero = Hero(Vector(width / 2, height / 1.7));
   console.log("heroe", hero);
   $('#character').css('background', '#2C81B7');
 
@@ -29,7 +29,7 @@ function init() {
 
   };
 
-  let enemy1 = Enemy(Vector(width, height / 3), image1);
+  let enemy1 = Enemy(Vector(width, height / 5), image1);
   enemiesPool.push(enemy1);
 
 
@@ -45,7 +45,7 @@ function init() {
 
   };
 
-  let enemy2 = Enemy(Vector(width + 300, height / 3), image2);
+  let enemy2 = Enemy(Vector(width + 300, height / 5), image2);
   enemiesPool.push(enemy2);
 
   let image3 = new Image();
@@ -60,7 +60,7 @@ function init() {
 
   };
 
-  let enemy3 = Enemy(Vector(width + 650, height / 3), image3);
+  let enemy3 = Enemy(Vector(width + 650, height / 5), image3);
   enemiesPool.push(enemy3);
 
   let image4 = new Image();
@@ -75,7 +75,7 @@ function init() {
 
   };
 
-  let enemy4 = Enemy(Vector(width + 1000, height / 3), image4);
+  let enemy4 = Enemy(Vector(width + 1000, height / 5), image4);
   enemiesPool.push(enemy4);
 
   let image5 = new Image();
@@ -90,7 +90,7 @@ function init() {
 
   };
 
-  let enemy5 = Enemy(Vector(width + 1200, height - 530), image5);
+  let enemy5 = Enemy(Vector(width + 1200, height - 230), image5);
   enemiesPool.push(enemy5);
 
   let image6 = new Image();
@@ -105,7 +105,7 @@ function init() {
 
   };
 
-  let enemy6 = Enemy(Vector(width + 1550, height - 730), image6);
+  let enemy6 = Enemy(Vector(width + 1550, height - 230), image6);
   enemiesPool.push(enemy6);
 
   function update() {
