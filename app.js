@@ -29,7 +29,7 @@ function init() {
 
   };
 
-  let enemy1 = Enemy(Vector(width, height / 4), image1);
+  let enemy1 = Enemy(Vector(width, height / 3.7), image1);
   enemiesPool.push(enemy1);
 
 
@@ -45,7 +45,7 @@ function init() {
 
   };
 
-  let enemy2 = Enemy(Vector(width + 300, height / 4), image2);
+  let enemy2 = Enemy(Vector(width + 300, height / 3.7), image2);
   enemiesPool.push(enemy2);
 
   let image3 = new Image();
@@ -60,7 +60,7 @@ function init() {
 
   };
 
-  let enemy3 = Enemy(Vector(width + 650, height / 4), image3);
+  let enemy3 = Enemy(Vector(width + 650, height / 3.7), image3);
   enemiesPool.push(enemy3);
 
   let image4 = new Image();
@@ -75,7 +75,7 @@ function init() {
 
   };
 
-  let enemy4 = Enemy(Vector(width + 1000, height / 4), image4);
+  let enemy4 = Enemy(Vector(width + 1000, height / 3.7), image4);
   enemiesPool.push(enemy4);
 
   let image5 = new Image();

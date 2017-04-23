@@ -51,7 +51,7 @@ Enemy.prototype.onCollisionEnter = function () {
 }
 
 Enemy.prototype.getRect = function () {
-    return Rect(this.position.x, this.position.y, this.width, this.height);
+    return Rect(this.position.x, this.position.y + 320, this.width, this.height);
 
 }
 
