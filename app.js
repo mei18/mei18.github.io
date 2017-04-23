@@ -12,7 +12,7 @@ function init() {
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
 
-  let hero = Hero(Vector(width / 2, height / 1.7));
+  let hero = Hero(Vector(width / 2, height / 1.9));
   console.log("heroe", hero);
   $('#character').css('background', '#2C81B7');
 
@@ -29,7 +29,7 @@ function init() {
 
   };
 
-  let enemy1 = Enemy(Vector(width, height / 4), image1);
+  let enemy1 = Enemy(Vector(width, height / 3), image1);
   enemiesPool.push(enemy1);
 
 
@@ -45,7 +45,7 @@ function init() {
 
   };
 
-  let enemy2 = Enemy(Vector(width + 300, height / 4), image2);
+  let enemy2 = Enemy(Vector(width + 300, height / 3), image2);
   enemiesPool.push(enemy2);
 
   let image3 = new Image();
@@ -60,7 +60,7 @@ function init() {
 
   };
 
-  let enemy3 = Enemy(Vector(width + 600, height / 4), image3);
+  let enemy3 = Enemy(Vector(width + 650, height / 3), image3);
   enemiesPool.push(enemy3);
 
   let image4 = new Image();
@@ -75,68 +75,38 @@ function init() {
 
   };
 
-  let enemy4 = Enemy(Vector(width + 900, height / 4), image4);
+  let enemy4 = Enemy(Vector(width + 1000, height / 3), image4);
   enemiesPool.push(enemy4);
 
-  let image8 = new Image();
-  image8.src = "../img/WBlue.png";
-  image8.id = 'enemy8';
-  image8.style.position = 'absolute';
-  image8.style.width = 100;
+  let image5 = new Image();
+  image5.src = "../img/icicle.png";
+  image5.id = 'enemy5';
+  image5.style.position = 'absolute';
+  image5.style.width = 200;
 
-  image8.onload = function () {
+  image5.onload = function () {
     console.log('Load image');
-    document.body.appendChild(image8);
+    document.body.appendChild(image5);
 
   };
 
-  let enemy8 = Enemy(Vector(width + 1200, height /8), image8);
-  enemiesPool.push(enemy8);
+  let enemy5 = Enemy(Vector(width + 1200, height - 530), image5);
+  enemiesPool.push(enemy5);
 
-  let image9 = new Image();
-  image9.src = "../img/WRed.png";
-  image9.id = 'enemy9';
-  image9.style.position = 'absolute';
-  image9.style.width = 100;
+  let image6 = new Image();
+  image6.src = "../img/stoneShard.png";
+  image6.id = 'enemy6';
+  image6.style.position = 'absolute';
+  image6.style.width = 200;
 
-  image9.onload = function () {
+  image6.onload = function () {
     console.log('Load image');
-    document.body.appendChild(image9);
+    document.body.appendChild(image6);
 
   };
 
-  let enemy9 = Enemy(Vector(width + 1500, height /8), image9);
-  enemiesPool.push(enemy9);
-
-  let image10 = new Image();
-  image10.src = "../img/WBrown.png";
-  image10.id = 'enemy10';
-  image10.style.position = 'absolute';
-  image10.style.width = 100;
-
-  image10.onload = function () {
-    console.log('Load image');
-    document.body.appendChild(image10);
-
-  };
-
-  let enemy10 = Enemy(Vector(width + 1800, height /8), image10);
-  enemiesPool.push(enemy10);
-
-  let image11 = new Image();
-  image11.src = "../img/WYellow.png";
-  image11.id = 'enemy11';
-  image11.style.position = 'absolute';
-  image11.style.width = 100;
-
-  image11.onload = function () {
-    console.log('Load image');
-    document.body.appendChild(image11);
-
-  };
-
-  let enemy11 = Enemy(Vector(width + 3750, height /8), image11);
-  enemiesPool.push(enemy11);
+  let enemy6 = Enemy(Vector(width + 1550, height - 730), image6);
+  enemiesPool.push(enemy6);
 
   function update() {
     //2. Recuerda que para animar los objectos hay que llamar a sus
