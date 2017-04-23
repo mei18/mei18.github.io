@@ -2,17 +2,17 @@ window.addEventListener("load", init, false);
 
 function init() {
   var width = window.innerWidth,
-    height = window.innerHeight,
-    enemiesPool = [],
-    animation;
-    modal = document.getElementsByClassName('modal');
+      height = window.innerHeight,
+      enemiesPool = [],
+      animation;
+      modal = document.getElementsByClassName('modal');
 
 
   console.log("init");
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
 
-  let hero = Hero(Vector(width / 2, height / 2));
+  let hero = Hero(Vector(width / 2, height / 2.2));
   console.log("heroe", hero);
   $('#character').css('background', '#2C81B7');
 
