@@ -12,7 +12,7 @@ function init() {
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
 
-  let hero = Hero(Vector(width / 2, height / 1.9));
+  let hero = Hero(Vector(width / 2, height / 1.7));
   console.log("heroe", hero);
   $('#character').css('background', '#2C81B7');
 
@@ -29,7 +29,7 @@ function init() {
 
   };
 
-  let enemy1 = Enemy(Vector(width, height / 3), image1);
+  let enemy1 = Enemy(Vector(width, height / 4), image1);
   enemiesPool.push(enemy1);
 
 
@@ -45,7 +45,7 @@ function init() {
 
   };
 
-  let enemy2 = Enemy(Vector(width + 300, height / 3), image2);
+  let enemy2 = Enemy(Vector(width + 300, height / 4), image2);
   enemiesPool.push(enemy2);
 
   let image3 = new Image();
@@ -60,7 +60,7 @@ function init() {
 
   };
 
-  let enemy3 = Enemy(Vector(width + 650, height / 3), image3);
+  let enemy3 = Enemy(Vector(width + 650, height / 4), image3);
   enemiesPool.push(enemy3);
 
   let image4 = new Image();
@@ -75,7 +75,7 @@ function init() {
 
   };
 
-  let enemy4 = Enemy(Vector(width + 1000, height / 3), image4);
+  let enemy4 = Enemy(Vector(width + 1000, height / 4), image4);
   enemiesPool.push(enemy4);
 
   let image8 = new Image();
@@ -90,7 +90,7 @@ function init() {
 
   };
 
-  let enemy8 = Enemy(Vector(width + 2100, height /5), image8);
+  let enemy8 = Enemy(Vector(width + 2100, height /8), image8);
   enemiesPool.push(enemy8);
 
   let image9 = new Image();
@@ -105,7 +105,7 @@ function init() {
 
   };
 
-  let enemy9 = Enemy(Vector(width + 2800, height /5), image9);
+  let enemy9 = Enemy(Vector(width + 2800, height /8), image9);
   enemiesPool.push(enemy9);
 
   let image10 = new Image();
@@ -120,7 +120,7 @@ function init() {
 
   };
 
-  let enemy10 = Enemy(Vector(width + 3150, height /5), image10);
+  let enemy10 = Enemy(Vector(width + 3150, height /8), image10);
   enemiesPool.push(enemy10);
 
   let image11 = new Image();
@@ -135,7 +135,7 @@ function init() {
 
   };
 
-  let enemy11 = Enemy(Vector(width + 3750, height /5), image11);
+  let enemy11 = Enemy(Vector(width + 3750, height /8), image11);
   enemiesPool.push(enemy11);
 
   function update() {
