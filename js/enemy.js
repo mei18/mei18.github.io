@@ -7,8 +7,8 @@ function Enemy(position, image) {
 
     this.velocity = Vector(-5, 0);
     this.position = position;
-    this.width = 100;
-    this.height = 10;
+    this.width = 98;
+    this.height = 85;
 
     this.image1 = image;
     this.image1.style.top = this.position.y + 320;
