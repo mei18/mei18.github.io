@@ -5,7 +5,7 @@ function Hero(position) {
     }
 
     this.position = position;
-    this.width = 100;
+    this.width = 98;
     this.height = 115;
 
     this.origin = Vector(position.x, position.y);
