@@ -78,36 +78,6 @@ function init() {
   let enemy4 = Enemy(Vector(width + 1000, height / 3), image4);
   enemiesPool.push(enemy4);
 
-  let image5 = new Image();
-  image5.src = "../img/icicle.png";
-  image5.id = 'enemy5';
-  image5.style.position = 'absolute';
-  image5.style.width = 200;
-
-  image5.onload = function () {
-    console.log('Load image');
-    document.body.appendChild(image5);
-
-  };
-
-  let enemy5 = Enemy(Vector(width + 1200, height - 530), image5);
-  enemiesPool.push(enemy5);
-
-  let image6 = new Image();
-  image6.src = "../img/stoneShard.png";
-  image6.id = 'enemy6';
-  image6.style.position = 'absolute';
-  image6.style.width = 200;
-
-  image6.onload = function () {
-    console.log('Load image');
-    document.body.appendChild(image6);
-
-  };
-
-  let enemy6 = Enemy(Vector(width + 1550, height - 730), image6);
-  enemiesPool.push(enemy6);
-
   let image8 = new Image();
   image8.src = "../img/WBlue.png";
   image8.id = 'enemy8';
