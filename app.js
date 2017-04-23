@@ -12,7 +12,7 @@ function init() {
   window.addEventListener("keydown", onKeyDown);
   window.addEventListener("keyup", onKeyUp);
 
-  let hero = Hero(Vector(width / 2, height / 4));
+  let hero = Hero(Vector(width / 2, height / 3456));
   console.log("heroe", hero);
   $('#character').css('background', '#2C81B7');
 
