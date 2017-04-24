@@ -7,7 +7,7 @@ function Enemy(position, image) {
 
     this.velocity = Vector(-5, 0);
     this.position = position;
-    this.width = 80;
+    this.width = 60;
     this.height = 85;
 
     this.image1 = image;
@@ -51,7 +51,7 @@ Enemy.prototype.onCollisionEnter = function () {
 }
 
 Enemy.prototype.getRect = function () {
-    return Rect(this.position.x - 10, this.position.y + 320, this.width, this.height);
+    return Rect(this.position.x - 20, this.position.y + 320, this.width, this.height);
 
 }
 
