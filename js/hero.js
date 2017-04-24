@@ -89,5 +89,5 @@ Hero.prototype.onCollisionEnter = function () {
 }
 
 Hero.prototype.getRect = function () {
-    return Rect(this.position.x - 20, this.position.y, this.width, this.height);
+    return Rect(this.position.x - 10, this.position.y, this.width, this.height);
 }
