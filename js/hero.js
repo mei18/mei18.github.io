@@ -5,7 +5,7 @@ function Hero(position) {
     }
 
     this.position = position;
-    this.width = 80;
+    this.width = 50;
     this.height = 115;
 
     this.origin = Vector(position.x, position.y);
@@ -89,5 +89,5 @@ Hero.prototype.onCollisionEnter = function () {
 }
 
 Hero.prototype.getRect = function () {
-    return Rect(this.position.x, this.position.y, this.width, this.height);
+    return Rect(this.position.x - 20, this.position.y, this.width, this.height);
 }
