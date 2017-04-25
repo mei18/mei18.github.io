@@ -23,8 +23,6 @@ function Enemy(position, image) {
     this.image6 = image;
     this.image6.style.top = this.position.y + 320;
 
-
-
 }
 
 Enemy.prototype.update = function () {

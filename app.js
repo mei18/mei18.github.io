@@ -1,7 +1,7 @@
 window.addEventListener("load", init, false);
 
 function init() {
-  var width = window.innerWidth,
+  let width = window.innerWidth,
       height = window.innerHeight,
       enemiesPool = [],
       animation;
@@ -89,7 +89,7 @@ function init() {
 
   };
 
-  let enemy5 = Enemy(Vector(width + 1280, height - 630), image5);
+  let enemy5 = Enemy(Vector(width + 1280, height / 4), image5);
   enemiesPool.push(enemy5);
 
   let image6 = new Image();
@@ -104,7 +104,7 @@ function init() {
 
   };
 
-  let enemy6 = Enemy(Vector(width + 1580, height - 630), image6);
+  let enemy6 = Enemy(Vector(width + 1580, height / 4), image6);
   enemiesPool.push(enemy6);
 
   function update() {
