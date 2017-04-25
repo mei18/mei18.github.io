@@ -89,7 +89,7 @@ function init() {
 
   };
 
-  let enemy5 = Enemy(Vector(width + 1280, height / 2.5), image5);
+  let enemy5 = Enemy(Vector(width + 1280, height / 3), image5);
   enemiesPool.push(enemy5);
 
   let image6 = new Image();
@@ -104,7 +104,7 @@ function init() {
 
   };
 
-  let enemy6 = Enemy(Vector(width + 1580, height / 2.5), image6);
+  let enemy6 = Enemy(Vector(width + 1580, height / 3), image6);
   enemiesPool.push(enemy6);
 
   function update() {
